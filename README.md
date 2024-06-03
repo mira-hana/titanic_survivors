@@ -15,8 +15,9 @@ To load these codes:
 3. Open titanic.R to look at basic codes
 4. Open titanic_unit-test.R to calculate_fare_per_person 
 5. Open titanic_integration-test.R for Titanic data analysis pipeline
-6. Open sample_titanic_dataset.R to see examples of the dataset
-7. Open titanic_common_stats.R to view common statistics from this dataset
+6. Open titanic_analysis.R to view the analysis of the dataset
+7. Open sample_titanic_dataset.R to see examples of the dataset
+8. Open titanic_common_stats.R to view common statistics from this dataset
 
 ## Required R packages ##
 
