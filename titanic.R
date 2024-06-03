@@ -1,16 +1,31 @@
+# Load necessary libraries
+library(ggplot2)
+
+# Load the Titanic dataset
 titanic <- read.csv("https://raw.githubusercontent.com/datasciencedojo/datasets/master/titanic.csv")
 
-head(titanic)   # View the first few rows
-summary(titanic)   # Summary statistics
-str(titanic)   # Structure of the dataset
-dim(titanic)   # Number of rows and columns
+# View the first few rows
+head(titanic)
 
-colSums(is.na(titanic))   # Check for missing values in each column
+# Summary statistics
+summary(titanic)
+
+# Structure of the dataset
+str(titanic)
+
+# Number of rows and columns
+dim(titanic)
+
+# Check for missing values in each column
+colSums(is.na(titanic))
 
 # Example: Extract titles from names
+# The regex pattern used here should correctly extract titles like 'Mr', 'Mrs', 'Miss', etc.
 titanic$Title <- gsub('(.*, )|(\\..*)', '', titanic$Name)
 
-library(ggplot2)
+# Verify the extracted titles
+table(titanic$Title)
+
 # Example: Survival by passenger class
 ggplot(titanic, aes(x = Pclass, fill = factor(Survived))) +
   geom_bar(position = "dodge") +
